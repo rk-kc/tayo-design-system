@@ -8,7 +8,7 @@
 
 @theme {
   /* ── Fonts ──
-     Tiempos serif is the single primary font, used everywhere — headings,
+     Libre Baskerville is the single primary font, used everywhere — headings,
      body, buttons, inputs. The warmth is intentional and part of the brand.
      Mono is reserved for code/tokens. */
   --font-sans: "Libre Baskerville", Georgia, serif;
