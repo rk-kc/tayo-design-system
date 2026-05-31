@@ -67,7 +67,7 @@ export function UserDetailSheet({
         )}
 
         {subtitle && (
-          <p className="text-xs text-white/55 mb-8 flex items-center gap-1.5 font-ui">
+          <p className="text-xs text-white/55 mb-8 flex items-center gap-1.5">
             <span className="text-sun shrink-0">{subtitle.icon}</span>
             {subtitle.text}
           </p>

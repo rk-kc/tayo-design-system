@@ -8,10 +8,11 @@
 
 @theme {
   /* ── Fonts ──
-     Tiempos for body/UI (warm serif), Inter for tight numeric/dense UI. */
+     Tiempos serif is the single primary font, used everywhere — headings,
+     body, buttons, inputs. The warmth is intentional and part of the brand.
+     Mono is reserved for code/tokens. */
   --font-sans: "Tiempos Text", Georgia, serif;
   --font-display: "Tiempos Text", Georgia, serif;
-  --font-ui: "Inter", system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ── Brand primary ──

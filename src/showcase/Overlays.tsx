@@ -53,10 +53,10 @@ export function OverlaysSection() {
             </div>
             <div className="flex-1 min-w-0">
               <h2 className="text-xl font-bold mb-1">Delete this album?</h2>
-              <p className="text-sm text-white/60 truncate font-ui">Tokyo Summer Trip 2026</p>
+              <p className="text-sm text-white/60 truncate">Tokyo Summer Trip 2026</p>
             </div>
           </div>
-          <ul className="space-y-2.5 mb-5 text-sm text-white/80 font-ui">
+          <ul className="space-y-2.5 mb-5 text-sm text-white/80">
             <li className="flex items-center gap-3">
               <ImageIcon className="w-4 h-4 text-white/40" /> 132 photos
             </li>
@@ -82,7 +82,7 @@ export function OverlaysSection() {
 
       <BottomSheet open={showSheet} onClose={() => setShowSheet(false)}>
         <h3 className="text-xl font-bold mb-2">Bottom sheet</h3>
-        <p className="text-sm text-white/70 font-ui mb-4">
+        <p className="text-sm text-white/70 mb-4">
           Used for navigational sheets and detail views. Slides up from the bottom of the viewport
           (or the desktop frame). Click outside or hit Escape to dismiss.
         </p>

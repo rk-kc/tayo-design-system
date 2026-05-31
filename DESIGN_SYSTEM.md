@@ -9,7 +9,7 @@ Source of truth for tokens, type scale, components, effects, and motion. The liv
 | Layer | Approach |
 |---|---|
 | Color | Dual palette — `leaf` (moss green) as brand primary + `sun` (warm orange) as secondary accent, on ink-black. Semantic ok/warn/danger. No light mode in v1. |
-| Typography | Tiempos Text serif for headings + body, Inter for dense UI (numbers, captions, buttons), mono for tokens |
+| Typography | Tiempos Text serif for everything (headings, body, buttons, inputs, captions); mono reserved for code/tokens |
 | Surface | One card style: `.glass-surface` — frosted white over ink with a soft border and ambient shadow |
 | Layout | Mobile-first (393×852). Desktop wraps the app in a 560px centered frame via `AppFrame` |
 | Motion | Bottom sheets slide up with `--ease-out-expo`. Confirmations fade-scale in `200ms`. |
@@ -94,8 +94,7 @@ The default card style is defined by these two tokens (consumed by `.glass-surfa
 
 | Family | Family stack | Use |
 |---|---|---|
-| `--font-sans` / `--font-display` | Tiempos Text, Georgia, serif | Headings (h1–h4), body, dialog titles |
-| `--font-ui` | Inter, system-ui, sans-serif | Buttons, captions, numbers, table rows, anything dense |
+| `--font-sans` / `--font-display` | Tiempos Text, Georgia, serif | Everything — headings, body, dialog titles, buttons, inputs, captions |
 | `--font-mono` | ui-monospace, SFMono-Regular | Tokens, codes, the QR token in share view |
 
 ### Scale
@@ -110,11 +109,11 @@ The system uses Tailwind's default scale; the only constants worth memorizing:
 | H3 | `text-xl font-bold` | Section headings inside cards |
 | H4 | `text-lg font-bold` | Sub-sections |
 | Body | `text-base` | Default paragraph |
-| Small | `text-sm` (in `font-ui`) | Helper text, supporting content |
-| Caption | `text-xs tracking-wide` (in `font-ui`) | Metadata: dates, counts, "JOINED" labels |
-| Micro | `text-[0.625rem]` (in `font-ui`) | Tile labels under stat numbers |
+| Small | `text-sm`  | Helper text, supporting content |
+| Caption | `text-xs tracking-wide`  | Metadata: dates, counts, "JOINED" labels |
+| Micro | `text-[0.625rem]`  | Tile labels under stat numbers |
 
-**Why two families?** The serif gives the product warmth — it doesn't feel like a generic SaaS dashboard. But serifs in form controls look antique and tabular numbers in serif read poorly. So Inter handles UI density wherever the serif gets in the way.
+**Why one family?** Tiempos serif everywhere is intentional. It gives the product warmth and a distinct personality — no SaaS-dashboard feel. Form controls, buttons, and numbers stay in the same serif voice as the headings; nothing breaks the rhythm.
 
 ---
 

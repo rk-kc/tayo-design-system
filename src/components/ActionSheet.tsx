@@ -35,9 +35,9 @@ export function ActionSheet({ open, onClose, options }: ActionSheetProps) {
               {opt.icon}
             </div>
             <div className="flex-1 min-w-0">
-              <div className="text-sm font-medium font-ui text-white">{opt.title}</div>
+              <div className="text-sm font-medium text-white">{opt.title}</div>
               {opt.subtitle && (
-                <div className="text-xs text-white/55 mt-0.5 font-ui">{opt.subtitle}</div>
+                <div className="text-xs text-white/55 mt-0.5">{opt.subtitle}</div>
               )}
             </div>
           </button>

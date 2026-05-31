@@ -21,11 +21,11 @@ export function PatternsSection() {
             <Avatar name="Yuki Tanaka" src="https://i.pravatar.cc/150?u=yuki" size="md" />
             <div className="flex-1 min-w-0">
               <h3 className="text-base font-bold truncate mb-0.5">Yuki Tanaka</h3>
-              <p className="text-xs text-white/50 truncate font-ui">
+              <p className="text-xs text-white/50 truncate">
                 Recent: Tokyo Summer Trip
               </p>
             </div>
-            <div className="flex flex-col items-end gap-1 text-xs text-white/60 font-ui">
+            <div className="flex flex-col items-end gap-1 text-xs text-white/60">
               <div className="flex items-center gap-1.5">
                 <ImageIcon className="w-3.5 h-3.5" />
                 <span>132</span>
@@ -50,15 +50,15 @@ export function PatternsSection() {
           >
             <div className="h-full flex flex-col justify-end p-4">
               <h3 className="text-xl font-bold mb-0.5">Tokyo Summer Trip</h3>
-              <p className="text-xs text-white/80 font-ui">Jun 14 – 18, 2026</p>
+              <p className="text-xs text-white/80">Jun 14 – 18, 2026</p>
             </div>
           </div>
           <div className="flex items-center justify-between px-4 py-3 border-t border-white/10">
-            <div className="flex items-center gap-2 text-xs text-white/60 font-ui">
+            <div className="flex items-center gap-2 text-xs text-white/60">
               <ImageIcon className="w-3.5 h-3.5" />
               <span>132 photos</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-white/60 font-ui">
+            <div className="flex items-center gap-2 text-xs text-white/60">
               <Users className="w-3.5 h-3.5" />
               <span>4 members</span>
             </div>
@@ -85,7 +85,7 @@ export function PatternsSection() {
               className="inline-block"
             />
             <h2 className="text-2xl font-bold mt-6 mb-2">Yuki Tanaka</h2>
-            <p className="text-xs text-white/55 flex items-center justify-center gap-1.5 font-ui">
+            <p className="text-xs text-white/55 flex items-center justify-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-sun" />
               Recently shared: Tokyo Summer Trip
             </p>
@@ -99,7 +99,7 @@ export function PatternsSection() {
 function Pattern({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-10">
-      <h3 className="text-xs font-ui font-medium uppercase tracking-widest text-white/40 mb-4">
+      <h3 className="text-xs font-medium uppercase tracking-widest text-white/40 mb-4">
         {title}
       </h3>
       {children}

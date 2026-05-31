@@ -62,7 +62,7 @@ If you don't want a git dependency, copy `src/styles/tokens.css`, `src/styles/ef
 - **Glass as the default surface.** Cards, dialogs, sheets, and inputs all share `.glass-surface`: frosted white over near-black, soft border, ambient shadow. Compose freely — they nest beautifully.
 - **Sheets, not popups.** Detail views and menus slide up from the bottom; only confirmations use centered dialogs. The motion is part of the brand.
 - **Tokens, not values.** No hex codes in component code — everything routes through CSS variables defined in `tokens.css`.
-- **Tiempos for headings, Inter for UI.** Warm serif headings give the app personality. Inter handles dense UI (numbers, captions, buttons) where the serif gets in the way.
+- **Tiempos serif everywhere.** Headings, body, buttons, inputs — all in the same warm serif. Single voice, distinct personality.
 - **Mobile is the default.** Components are designed for 393×852. Desktop wraps the app in a centered 560px frame (see `AppFrame`).
 
 ## Cross-platform porting

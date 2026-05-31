@@ -26,9 +26,9 @@ function Header() {
         <div className="flex items-center gap-3">
           <div className="w-7 h-7 rounded-full bg-leaf" />
           <span className="font-bold">Tayo Design System</span>
-          <span className="text-xs text-white/40 font-ui">v0.1</span>
+          <span className="text-xs text-white/40">v0.1</span>
         </div>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-ui text-white/60">
+        <nav className="hidden md:flex items-center gap-6 text-sm text-white/60">
           <a href="#tokens" className="hover:text-white transition-colors">Tokens</a>
           <a href="#primitives" className="hover:text-white transition-colors">Primitives</a>
           <a href="#overlays" className="hover:text-white transition-colors">Overlays</a>
@@ -50,13 +50,13 @@ function Hero() {
         }}
         aria-hidden="true"
       />
-      <p className="text-xs uppercase tracking-widest text-leaf font-ui font-medium mb-3">
+      <p className="text-xs uppercase tracking-widest text-leaf font-medium mb-3">
         A mobile-first component kit
       </p>
       <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-3xl mx-auto leading-tight">
         Moss-green primary, glass surfaces, sun-warm accents.
       </h1>
-      <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto font-ui">
+      <p className="text-base md:text-lg text-white/60 max-w-2xl mx-auto">
         Token-driven, dark-first. Built around a deep leaf-green brand color, a frosted glass
         surface, and warm orange accents that give every screen its identity.
       </p>
@@ -67,7 +67,7 @@ function Hero() {
 function Footer() {
   return (
     <footer className="border-t border-white/10 py-10 px-6 md:px-10">
-      <div className="max-w-5xl mx-auto text-xs text-white/40 font-ui text-center">
+      <div className="max-w-5xl mx-auto text-xs text-white/40 text-center">
         See <code className="text-white/60">DESIGN_SYSTEM.md</code> for the full spec.
       </div>
     </footer>

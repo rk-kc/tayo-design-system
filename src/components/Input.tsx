@@ -36,12 +36,12 @@ const iconSize: Record<InputSize, string> = {
   lg: '[&>*]:w-5 [&>*]:h-5',
 }
 
-// Frosted-glass input that pairs with the rest of the system.
-// `font-ui` because Tiempos serif numbers don't read well in form fields.
+// Frosted-glass input that pairs with the rest of the system. Inherits the
+// Tiempos serif body font like every other text surface.
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ leftIcon, inputSize = 'md', className, ...rest }, ref) => {
     const sharedFocus =
-      'glass-surface rounded-xl font-ui text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-leaf focus:border-transparent'
+      'glass-surface rounded-xl text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-leaf focus:border-transparent'
 
     if (leftIcon) {
       return (

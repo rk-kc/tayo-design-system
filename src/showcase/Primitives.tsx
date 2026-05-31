@@ -44,13 +44,13 @@ export function PrimitivesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
           <Card>
             <h4 className="text-base font-bold mb-1">Standard card</h4>
-            <p className="text-sm text-white/55 font-ui">
+            <p className="text-sm text-white/55">
               The default glass surface for grouped content.
             </p>
           </Card>
           <Card interactive>
             <h4 className="text-base font-bold mb-1">Interactive card</h4>
-            <p className="text-sm text-white/55 font-ui">Tap me — adds press scale + hover lift.</p>
+            <p className="text-sm text-white/55">Tap me — adds press scale + hover lift.</p>
           </Card>
         </div>
       </Group>
@@ -93,7 +93,7 @@ export function PrimitivesSection() {
           <Input inputSize="lg" leftIcon={<Search />} placeholder="Find an event…" />
         </div>
         <div className="max-w-sm mt-4">
-          <p className="text-xs text-white/40 font-ui mb-2">Heights match Button sizes:</p>
+          <p className="text-xs text-white/40 mb-2">Heights match Button sizes:</p>
           <div className="flex gap-2 items-center">
             <Input inputSize="md" placeholder="Join code" />
             <Button size="md">Join</Button>
@@ -102,7 +102,7 @@ export function PrimitivesSection() {
       </Group>
 
       <Group title="FAB">
-        <div className="relative h-24 max-w-sm glass-surface rounded-2xl flex items-center justify-center text-xs text-white/40 font-ui">
+        <div className="relative h-24 max-w-sm glass-surface rounded-2xl flex items-center justify-center text-xs text-white/40">
           (placement preview)
           <Fab fixed={false} icon={<Camera className="w-6 h-6" />} label="Add photo" />
         </div>
@@ -126,7 +126,7 @@ export function PrimitivesSection() {
 function Group({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-10">
-      <h3 className="text-xs font-ui font-medium uppercase tracking-widest text-white/40 mb-4">
+      <h3 className="text-xs font-medium uppercase tracking-widest text-white/40 mb-4">
         {title}
       </h3>
       {children}

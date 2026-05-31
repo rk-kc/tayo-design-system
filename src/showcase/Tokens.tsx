@@ -90,7 +90,7 @@ export function TokensSection() {
               className="w-20 h-20 bg-white/10 border border-white/15"
               style={{ borderRadius: `${r.px}px` }}
             />
-            <code className="text-xs font-ui text-white/70">--radius-{r.name}</code>
+            <code className="text-xs text-white/70">--radius-{r.name}</code>
             <code className="text-[0.625rem] font-mono text-white/40">{r.px}px</code>
           </div>
         ))}
@@ -104,7 +104,7 @@ export function TokensSection() {
               style={{ boxShadow: `var(--shadow-${s.name})` }}
             />
             <div className="text-center">
-              <code className="text-xs font-ui text-white/70 block">--shadow-{s.name}</code>
+              <code className="text-xs text-white/70 block">--shadow-{s.name}</code>
               <span className="text-[0.625rem] text-white/40">{s.desc}</span>
             </div>
           </div>
@@ -125,13 +125,13 @@ export function TokensSection() {
           <TypeRow label="H3" className="text-xl font-bold">
             Section heading
           </TypeRow>
-          <TypeRow label="Body (sans)" className="text-base font-ui">
+          <TypeRow label="Body (sans)" className="text-base">
             People you've shared memories with
           </TypeRow>
-          <TypeRow label="Small (sans)" className="text-sm font-ui text-white/70">
+          <TypeRow label="Small (sans)" className="text-sm text-white/70">
             Most recent shared event
           </TypeRow>
-          <TypeRow label="Caption (sans, tracked)" className="text-xs font-ui tracking-wide text-white/50">
+          <TypeRow label="Caption (sans, tracked)" className="text-xs tracking-wide text-white/50">
             JOINED MAR 14, 2026
           </TypeRow>
         </div>
@@ -143,7 +143,7 @@ export function TokensSection() {
 function Row({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-10">
-      <h3 className="text-xs font-ui font-medium uppercase tracking-widest text-white/40 mb-4">
+      <h3 className="text-xs font-medium uppercase tracking-widest text-white/40 mb-4">
         {title}
       </h3>
       <div className="flex flex-wrap gap-4 items-start">{children}</div>
@@ -158,7 +158,7 @@ function Swatch({ swatch }: { swatch: Swatch }) {
         className="w-20 h-20 rounded-2xl border border-white/10"
         style={{ background: swatch.value }}
       />
-      <code className="text-xs font-ui text-white/70">{swatch.name}</code>
+      <code className="text-xs text-white/70">{swatch.name}</code>
       <code className="text-[0.625rem] font-mono text-white/40">{swatch.value}</code>
     </div>
   )

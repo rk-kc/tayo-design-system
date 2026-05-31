@@ -12,10 +12,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 // All buttons share the same press feel: tiny scale-down + opacity dim on
-// disabled. The `text-sm font-medium` is intentional — bold serif headings
-// don't make great button labels.
+// disabled. `text-sm font-medium` keeps button labels readable without
+// borrowing heading weights — same Tiempos serif as the rest of the app.
 const baseClasses =
-  'inline-flex items-center justify-center gap-2 rounded-xl font-ui text-sm font-medium transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed'
+  'inline-flex items-center justify-center gap-2 rounded-xl text-sm font-medium transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed'
 
 // `text-white` on leaf (not text-black like the orange one had) because
 // #546B41 is dark enough that black text drops well below contrast minimums.
