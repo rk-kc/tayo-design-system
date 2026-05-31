@@ -1,0 +1,55 @@
+{
+  "name": "tayo-design-system",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Tayo design standard — portable component kit (React 18 + Tailwind 4)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rk-kc/tayo-design-system.git"
+  },
+  "license": "UNLICENSED",
+  "files": [
+    "src",
+    "README.md",
+    "DESIGN_SYSTEM.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/components/index.ts",
+      "import": "./src/components/index.ts"
+    },
+    "./styles/tokens.css": "./src/styles/tokens.css",
+    "./styles/effects.css": "./src/styles/effects.css",
+    "./components/*": "./src/components/*.tsx",
+    "./lib/cn": "./src/lib/cn.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json"
+  },
+  "peerDependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.0 || ^19.0.0",
+    "react-dom": "^18.3.0 || ^19.0.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.0",
+    "vite": "^6.0.0"
+  }
+}

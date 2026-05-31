@@ -1,0 +1,25 @@
+# Dependencies
+node_modules
+
+# Build output (we ship source, not built artifacts — Vite consumers compile on demand)
+dist
+
+# Local env / editor
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.iml
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Lockfile is intentionally tracked; remove the next line if you prefer otherwise
+# package-lock.json

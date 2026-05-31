@@ -1,0 +1,150 @@
+/* ─────────────────────────────────────────────────────────────
+   Tayo Design Effects
+   Drop-in utility classes for the system's signature feel:
+   glass, ambient orbs, slide-up sheets, sun-glow.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Glass surface ──
+   The default card style across the app: frosted near-white over ink,
+   soft white border, ambient shadow. Compose freely. */
+
+.glass-surface {
+  background-color: var(--color-glass-fill);
+  border: 1px solid var(--color-glass-border);
+  backdrop-filter: blur(var(--blur-xl));
+  -webkit-backdrop-filter: blur(var(--blur-xl));
+  box-shadow: var(--shadow-glass);
+}
+
+/* ── Sun glow ──
+   Use behind avatars, key icons, or hero elements to introduce the
+   warm tayo-sun radiation that ties the design language together. */
+
+.sun-glow {
+  position: relative;
+}
+.sun-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(255, 140, 66, 0.45);
+  transform: scale(1.4);
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ── Ambient orbs (for the desktop frame canvas) ──
+   Two soft orange/coral blobs that float outside the app frame. Apply
+   to a `position: relative` parent and they sit behind everything else. */
+
+.ambient-orb {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.ambient-orb-sun {
+  background: rgba(255, 140, 66, 0.18);
+}
+.ambient-orb-deep {
+  background: rgba(229, 107, 58, 0.12);
+}
+
+/* ── Sheet slide-up animation ──
+   The signature Tayo modal motion. Sheets enter with a snappy ease and
+   leave with a slightly shorter curve so close feels lighter than open. */
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sheet-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0.6;
+  }
+}
+
+.sheet-anim[data-state="open"] {
+  animation: sheet-in var(--duration-sheet-in) var(--ease-out-expo) forwards;
+}
+.sheet-anim[data-state="closed"] {
+  animation: sheet-out var(--duration-sheet-out) var(--ease-snap) forwards;
+}
+
+/* ── Backdrop fade ── */
+
+@keyframes backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes backdrop-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.backdrop-anim[data-state="open"] {
+  animation: backdrop-in var(--duration-fade) var(--ease-snap) forwards;
+}
+.backdrop-anim[data-state="closed"] {
+  animation: backdrop-out var(--duration-fade) var(--ease-snap) forwards;
+}
+
+/* ── Skeleton pulse ── */
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.skeleton-pulse {
+  animation: skeleton-pulse 1.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ── Drag handle ──
+   The little pill at the top of every bottom sheet. Visual affordance
+   for "this is dismissible / draggable". */
+
+.drag-handle {
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Hide native scrollbar ──
+   Used by the desktop frame so its internal scroll doesn't show a
+   distracting native bar inside the floating window. */
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── iOS safe-area helpers ── */
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
