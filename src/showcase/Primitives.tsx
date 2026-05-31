@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Image as ImageIcon, Users, Search, Camera, Plus } from 'lucide-react'
 import { SectionHeader } from './SectionHeader'
 import { Button } from '@/components/Button'
+import { Calendar } from '@/components/Calendar'
 import { Card } from '@/components/Card'
+import { DatePicker } from '@/components/DatePicker'
 import { Avatar } from '@/components/Avatar'
 import { Badge } from '@/components/Badge'
 import { Stat } from '@/components/Stat'
@@ -10,6 +13,11 @@ import { Fab } from '@/components/Fab'
 import { Skeleton } from '@/components/Skeleton'
 
 export function PrimitivesSection() {
+  const [pickedDate, setPickedDate] = useState<Date | null>(null)
+  const [rangeStart, setRangeStart] = useState<Date | null>(null)
+  const [pickerStart, setPickerStart] = useState<Date | null>(null)
+  const [pickerEnd, setPickerEnd] = useState<Date | null>(null)
+
   return (
     <section id="primitives" className="py-16 md:py-24">
       <SectionHeader
@@ -118,6 +126,54 @@ export function PrimitivesSection() {
             </div>
           </div>
         </Card>
+      </Group>
+
+      <Group title="Calendar">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl">
+          <div>
+            <p className="text-xs text-white/40 mb-2">Single date pick</p>
+            <Calendar value={pickedDate} onChange={setPickedDate} className="max-w-sm" />
+            <p className="text-xs text-white/50 mt-2">
+              Selected:{' '}
+              <span className="text-white">
+                {pickedDate ? pickedDate.toDateString() : '—'}
+              </span>
+            </p>
+          </div>
+          <div>
+            <p className="text-xs text-white/40 mb-2">With minDate (today)</p>
+            <Calendar
+              value={rangeStart}
+              onChange={setRangeStart}
+              minDate={new Date()}
+              className="max-w-sm"
+            />
+          </div>
+        </div>
+      </Group>
+
+      <Group title="DatePicker">
+        <div className="max-w-sm space-y-3">
+          <p className="text-xs text-white/40">
+            Input-shaped trigger that opens the calendar in a bottom sheet. Drop into forms
+            next to other Inputs.
+          </p>
+          <div className="grid grid-cols-2 gap-3">
+            <DatePicker
+              value={pickerStart}
+              onChange={setPickerStart}
+              placeholder="Start date"
+              sheetTitle="Start date"
+            />
+            <DatePicker
+              value={pickerEnd}
+              onChange={setPickerEnd}
+              placeholder="End date"
+              minDate={pickerStart ?? undefined}
+              sheetTitle="End date"
+            />
+          </div>
+        </div>
       </Group>
     </section>
   )
