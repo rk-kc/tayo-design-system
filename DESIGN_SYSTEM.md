@@ -9,7 +9,7 @@ Source of truth for tokens, type scale, components, effects, and motion. The liv
 | Layer | Approach |
 |---|---|
 | Color | Dual palette — `leaf` (moss green) as brand primary + `sun` (warm orange) as secondary accent, on ink-black. Semantic ok/warn/danger. No light mode in v1. |
-| Typography | Tiempos Text serif for everything (headings, body, buttons, inputs, captions); mono reserved for code/tokens |
+| Typography | Libre Baskerville serif for everything (headings, body, buttons, inputs, captions); mono reserved for code/tokens |
 | Surface | One card style: `.glass-surface` — frosted white over ink with a soft border and ambient shadow |
 | Layout | Mobile-first (393×852). Desktop wraps the app in a 560px centered frame via `AppFrame` |
 | Motion | Bottom sheets slide up with `--ease-out-expo`. Confirmations fade-scale in `200ms`. |
@@ -94,7 +94,7 @@ The default card style is defined by these two tokens (consumed by `.glass-surfa
 
 | Family | Family stack | Use |
 |---|---|---|
-| `--font-sans` / `--font-display` | Tiempos Text, Georgia, serif | Everything — headings, body, dialog titles, buttons, inputs, captions |
+| `--font-sans` / `--font-display` | Libre Baskerville, Georgia, serif | Everything — headings, body, dialog titles, buttons, inputs, captions |
 | `--font-mono` | ui-monospace, SFMono-Regular | Tokens, codes, the QR token in share view |
 
 ### Scale
